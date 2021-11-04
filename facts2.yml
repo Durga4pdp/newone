@@ -7,8 +7,3 @@
     apt:
       name: git
       state: present
-
-  - name: install git on ansible redhat node
-    yum:
-      name: git
-      state: started    
