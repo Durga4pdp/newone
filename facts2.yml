@@ -10,5 +10,5 @@
 
   - name: install git on ansible redhat node
     yum:
-     name: git
-     state: started    
+      name: git
+      state: started    
