@@ -1,0 +1,10 @@
+---
+- hosts: 172.31.35.15
+  become: yes
+  vars:
+   myvar1: tree
+   myvar2: git
+  tasks: 
+  - name: display myvar2
+    debug:
+      msg: "{{myvar2}}"
