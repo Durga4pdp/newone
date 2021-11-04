@@ -1,9 +1,9 @@
 ---
 - hosts: all
   become: yes
-  gathering facts: yes
+  gathering_facts: yes
   tasks:
-  - name: install git
+  - name: install git on ubuntu node
     apt:
      name: git
      state: present
