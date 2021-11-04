@@ -1,0 +1,15 @@
+---
+- hosts: pdpservers
+  become: yes
+  tasks:
+  - name: install websever on ubuntu ansible nodes
+    apt:
+      name: "{{mywebpackforubuntu}}"
+      state: present
+    when: ansible_os_family=="Debian"
+
+  - name: start webserver on ubuntu ans nodes
+    service:
+      name: "{{mywebpackforubuntu}}"
+      state: started
+    when: ansible_os_family=="Debian"
